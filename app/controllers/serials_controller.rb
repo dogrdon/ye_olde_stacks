@@ -4,7 +4,14 @@ class SerialsController < ApplicationController
   # GET /serials
   # GET /serials.json
   def index
-    @serials = Serial.all
+    
+
+    @search = Serial.search do
+      keywords params[:query]
+    end
+
+    #@serials = Serial.all #this is just too many records to return
+    @serials = @search.results
   end
 
   # GET /serials/1
