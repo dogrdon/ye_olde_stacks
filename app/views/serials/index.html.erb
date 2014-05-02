@@ -8,6 +8,9 @@
     <%= submit_tag 'Search', :name => nil, :class => 'btn' %>
   </p>
 <% end %>
+<%= link_to "New Serial",
+            new_serial_path,
+            :class => 'btn btn-primary' %>
 
 <div id="facets">
   <h3>Location</h3>
@@ -65,6 +68,4 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_serial_path,
-            :class => 'btn btn-primary' %>
+
