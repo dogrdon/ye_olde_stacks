@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  volume: MyString
+  year: MyString
+  floor: MyString
+  row: MyString
+  section: MyString
+  notes: MyText
+
+two:
+  title: MyString
+  volume: MyString
+  year: MyString
+  floor: MyString
+  row: MyString
+  section: MyString
+  notes: MyText

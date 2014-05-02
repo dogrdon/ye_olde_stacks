@@ -1,0 +1,50 @@
+<%= form_for @serial, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :title, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :title, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :volume, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :volume, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :year, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :year, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :floor, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :floor, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :row, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :row, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :section, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :section, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :notes, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :notes, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                serials_path, :class => 'btn' %>
+  </div>
+<% end %>
