@@ -16,4 +16,4 @@
 /tmp
 
 #ignore solr data
-solr/development/data/*
+solr/development
