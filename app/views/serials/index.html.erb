@@ -4,7 +4,7 @@
 </div>
 <%= form_tag serials_path, :method => :get do %>
   <p>
-    <%= text_field_tag :search, params[:query] %>
+    <%= text_field_tag :search, params[:search] %>
     <%= submit_tag 'Search', :name => nil, :class => 'btn' %>
   </p>
 <% end %>

@@ -7,7 +7,7 @@ class SerialsController < ApplicationController
     
 
     @search = Serial.search do
-      keywords params[:query]
+      fulltext params[:search]
     end
 
     #@serials = Serial.all #this is just too many records to return
