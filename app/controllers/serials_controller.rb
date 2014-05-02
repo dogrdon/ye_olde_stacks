@@ -8,6 +8,9 @@ class SerialsController < ApplicationController
 
     @search = Serial.search do
       fulltext params[:search]
+      facet(:floor)
+      with(:floor, params[:location]) if params[:location].present?
+      facet(:year)
     end
 
     #@serials = Serial.all #this is just too many records to return
