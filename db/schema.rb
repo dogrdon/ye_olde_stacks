@@ -13,13 +13,16 @@
 
 ActiveRecord::Schema.define(version: 20140501192420) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "serials", force: true do |t|
-    t.string   "title"
-    t.string   "volume"
-    t.string   "year"
-    t.string   "floor"
-    t.string   "row"
-    t.string   "section"
+    t.text     "title"
+    t.text     "volume"
+    t.text     "year"
+    t.text     "floor"
+    t.text     "row"
+    t.text     "section"
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -55,3 +55,6 @@ gem 'progress_bar'
 
 #kaminari for pagination
 gem 'kaminari'
+
+#migrate to postgres
+gem 'pg'
