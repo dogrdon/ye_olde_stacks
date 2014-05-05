@@ -8,12 +8,14 @@ class SerialsController < ApplicationController
 
     @search = Serial.search do
       fulltext params[:search]
+      paginate(:page => params[:page] || 1, :per_page => 250)
       facet(:floor)
       with(:floor, params[:location]) if params[:location].present?
     end
 
     #@serials = Serial.all #this is just too many records to return
     @serials = @search.results
+    @total_results = @serials.total_entries
   end
 
   # GET /serials/1

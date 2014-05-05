@@ -2,11 +2,16 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
+
+
+
 <%= form_tag serials_path, :method => :get do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag 'Search', :name => nil, :class => 'btn' %>
   </p>
+  <p>Total Results: <%= @total_results %></p>
+  <hr/> 
 <% end %>
 <%= link_to "New Serial",
             new_serial_path,
@@ -14,11 +19,12 @@
 
 <div id="facets">
   <h3>Location</h3>
+  
   <ul>
     <% for row in @search.facet(:floor).rows %>
       <li>
         <% if params[:location].blank? %>
-          <%= link_to row.value, :location => row.value %> (<%= row.count %>)
+          <%= link_to row.value, :location => row.value, :search => params[:search] %> (<%= row.count %>)
         <% else %>
           <b> <%= row.value %> </b> (<%= link_to "X", :location => nil %>)
         <% end %>
@@ -46,7 +52,7 @@
     <% @serials.each do |serial| %>
       <tr>
         <td><%= link_to serial.id, serial_path(serial) %></td>
-        <td><%= serial.title %></td>
+        <td><%= link_to serial.title, serial_path(serial) %></td>
         <td><%= serial.volume %></td>
         <td><%= serial.year %></td>
         <td><%= serial.floor %></td>
