@@ -52,3 +52,6 @@ end
 
 #progress bar 
 gem 'progress_bar'
+
+#kaminari for pagination
+gem 'kaminari'

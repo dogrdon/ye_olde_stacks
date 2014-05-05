@@ -11,7 +11,10 @@
     <%= submit_tag 'Search', :name => nil, :class => 'btn' %>
   </p>
   <p>Total Results: <%= @total_results %></p>
+  <p>Total Pages:  <%= @serials.total_pages %> </p>
+  <%= paginate @serials %>
   <hr/> 
+ 
 <% end %>
 <%= link_to "New Serial",
             new_serial_path,
