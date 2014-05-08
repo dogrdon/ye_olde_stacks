@@ -58,3 +58,6 @@ gem 'kaminari'
 
 #migrate to postgres
 gem 'pg'
+
+#gem for renaming
+gem 'rename'
