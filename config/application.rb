@@ -23,5 +23,7 @@ module SerialsLocator
     # From Devise - If you are deploying on Heroku with Rails 3.2 only, you may want to set:
     # config.assets.initialize_on_precompile = false
 
+    #for fonts in bootstrap 3 - http://www.erikminkel.com/2013/09/01/twitter-bootstrap-3-in-a-rails-4-application/
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
   end
 end

@@ -42,7 +42,7 @@ gem 'spring',        group: :development
 #add the rubyracer above
 
 gem 'less-rails'
-gem 'twitter-bootstrap-rails'
+#gem 'twitter-bootstrap-rails'
 
 #add solr with sunspot
 gem 'sunspot_rails'
