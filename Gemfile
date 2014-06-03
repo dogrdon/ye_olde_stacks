@@ -61,3 +61,6 @@ gem 'pg'
 
 #gem for renaming
 gem 'rename'
+
+#devise for authentication
+gem 'devise'
