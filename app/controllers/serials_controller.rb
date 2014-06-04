@@ -1,5 +1,6 @@
 class SerialsController < ApplicationController
   before_action :set_serial, only: [:show, :edit, :update, :destroy]
+  before_action :is_user, only: [:edit, :new, :destroy]
 
   # GET /serials
   # GET /serials.json
@@ -83,4 +84,8 @@ class SerialsController < ApplicationController
     def serial_params
       params.require(:serial).permit(:title, :volume, :year, :floor, :row, :section, :notes)
     end
+
+    def is_user
+      redirect_to(root_url) unless user_signed_in?
+    end 
 end
