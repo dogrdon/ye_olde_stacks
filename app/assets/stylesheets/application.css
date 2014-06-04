@@ -10,7 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require bootstrap
+ *= require bootstrap.min
  *= require_tree .
  *= require_self
  */
@@ -51,4 +51,22 @@ url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') fo
 #facets ul li a:hover {
 	background-color: #009DAC;
 	color: #fff;
+}
+
+/* bootstrap overrides */
+.navbar-link:hover, 
+a.btn:hover{
+	background-color: #cecece;
+
+}
+
+a.btn-danger:hover{
+	background-color: #d2322d;
+	opacity: 0.7;
+}
+
+a.btn-primary:hover{
+	background-color: #428bca;
+	opacity: 0.7;
+}
 }

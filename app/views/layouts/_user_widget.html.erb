@@ -1,7 +1,6 @@
+
 <% if user_signed_in? %>
-  <p>Welcome <%= current_user.email %></p>
-  <%= link_to 'Logged In [click to logout]', destroy_user_session_path, :method => :delete %>
+  <p class="navbar-right">Logged in as <%= current_user.email %> <%= link_to ' [click to logout]', destroy_user_session_path, :method => :delete, :class => 'navbar-link' %></p>
 <% else %>
-  <p>You are not signed in.</p>
-  <%= link_to 'Login', new_user_session_path %>
+  <p class="navbar-right"><%= link_to 'Login', new_user_session_path, :class => 'navbar-link' %></p>
 <% end %>

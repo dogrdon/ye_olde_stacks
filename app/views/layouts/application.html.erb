@@ -8,18 +8,22 @@
 </head>
 <body>
  
-<div class="navbar" >
-    <div class="navbar-inner">
-       	 <%= render 'layouts/user_widget' %>
-    </div>
-  
-</div>
 
- <p class="notice"><%= notice %></p>
- <p class="alert"><%= alert %></p>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+   <%= render 'layouts/user_widget' %> 
+  </div><!-- /.container-fluid -->
+</nav>
 
-<%= yield %>
-	
+<% if flash[:notice] %>
+ <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if flash[:alert] %>
+ <p class="alert alert-info"><%= alert %></p>
+<% end %>
+<div class="container">
+	<%= yield %>
+</div>	
 </body>
 </html>
 
